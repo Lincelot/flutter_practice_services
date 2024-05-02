@@ -1,7 +1,16 @@
 library flutter_practice_services;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter_practice_services/database/db_provider.dart';
+import 'package:flutter_practice_services/di/module.dart';
+import 'package:flutter_practice_services/dio/dio_provider.dart';
+
+class Service {
+  static Future<void> initConfig() async {
+    DioProvider.init();
+
+    await Future.wait([
+      DatabaseProvider.init(),
+      Module.init(),
+    ]);
+  }
 }
