@@ -30,7 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  get:
+  dio: ^5.4.3
   flutter_practice_services:
     path: ../
 
