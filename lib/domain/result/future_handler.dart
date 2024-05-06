@@ -8,7 +8,7 @@ Future<Either<Failure, T>> futureHandler<T>(Future<T> Function() future) async {
   } on DioException catch (e) {
     switch (e.error.runtimeType) {
       case APIException:
-        return left(AIPFailure(e,
+        return left(APIFailure(e,
             baseResponse: (e.error as APIException).baseResponse));
       case HttpConnectException:
         return left(HttpConnectFailure(e));

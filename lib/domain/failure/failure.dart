@@ -47,10 +47,10 @@ class APIException implements Exception {
   APIException(this.baseResponse);
 }
 
-class AIPFailure extends Failure {
+class APIFailure extends Failure {
   final DioException dioException;
   final BaseResponse? baseResponse;
 
-  const AIPFailure(this.dioException, {this.baseResponse})
+  const APIFailure(this.dioException, {this.baseResponse})
       : super(dioException);
 }
