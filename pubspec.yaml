@@ -24,6 +24,7 @@ dependencies:
   equatable: ^2.0.5
   json_annotation: ^4.9.0
   build_config: ^1.1.1
+  get:
 
 dev_dependencies:
   flutter_test:
